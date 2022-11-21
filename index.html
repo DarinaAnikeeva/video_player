@@ -4,16 +4,35 @@
   <title>Плеер</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="font-awesome.min.css" >
+  <style type="text/css">
+    .player {
+      width: 800px;
+      height: 600px
+    }
+    .js-video-container {
+      width: 100%;
+      height: 100%
+    }
+    .button-string {
+      background-color: black;
+    }
+    button {
+      border-style: none;
+      cursor: pointer;
+      color: white;
+      background-color: transparent
+    }
+  </style>
 </head>
 <body>
-  <div id="player" style="width: 800px; height: 600px;">
-    <div class="js-video-container" style="width: 100%; height: 100%;"></div>
+  <div class="player" id="player">
+    <div class="js-video-container"></div>
     <!-- Here can be placed player controls: play and volume buttons -->
-    <div style="background-color: black; width: 800px; ">
-      <button class="js-play-button" style="border-style: none; cursor: pointer; color: white; background-color: transparent">
+    <div class="button-string">
+      <button class="js-play-button">
         <i class="fa fa-play" aria-hidden="true"></i>
       </button>
-      <button class="js-pause-button" style="border-style: none; cursor: pointer; color: white; background-color: transparent">
+      <button class="js-pause-button">
         <i class="fa fa-pause" aria-hidden="true"></i>
       </button>
     </div>
