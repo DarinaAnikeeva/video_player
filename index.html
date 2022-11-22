@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" >
 
   <style type="text/css">
-    .player {
+    .video-player {
       width: 800px;
       height: 600px;
       box-shadow: 0 0 20px rgba(0,0,0,1);
@@ -23,40 +23,42 @@
     .bottom-controls {
       background-color: black;
       display: flex;
+      align-items: center
     }
 
 
-    button {
+    .video-player__button {
       border-style: none;
       cursor: pointer;
       color: white;
       background-color: transparent;
       font-size: 120%;
       margin: 10px;
-      flex-grow: 0
     }
 
-
+    .video-player__progress{
+      flex-grow: 1
+    }
   </style>
 </head>
 <body>
-  <div class="player" id="player">
+  <div class="video-player" id="player">
     <div class="screen js-video-container"></div>
     <div class="bottom-controls">
-      <button class="left-button js-play-button">
+      <button class="video-player__button js-play-button">
         <i class="fa fa-play" aria-hidden="true"></i>
       </button>
-      <button class="js-pause-button">
+      <button class="video-player__button js-pause-button">
         <i class="fa fa-pause" aria-hidden="true"></i>
       </button>
-      <button class="js-mute-button">
+      <button class="video-player__button js-mute-button">
         <i class="fa fa-volume-up" aria-hidden="true"></i>
       </button>
-      <button class="js-volume-button">
+      <button class="video-player__button js-volume-button">
         <i class="fa fa-volume-off" aria-hidden="true"></i>
       </button>
-      <div style="flex-grow: 5" ></div>
-      <button class="js-fullscreen-button">
+      <div class="video-player__progress" ></div>
+      <button class="video-player__button js-fullscreen-button">
         <i class="fa fa-expand" aria-hidden="true"></i>
       </button>
     </div>
