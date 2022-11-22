@@ -12,26 +12,35 @@
       display: flex;
       flex-direction: column;
     }
-    .js-video-container {
+
+    .screen {
       flex-grow: 1
     }
-    .button-string {
+
+    .bottom-controls {
       background-color: black;
+      display: flex;
     }
+
+
     button {
       border-style: none;
       cursor: pointer;
       color: white;
-      background-color: transparent
+      background-color: transparent;
+      font-size: 120%;
+      margin: 10px;
+      flex-grow: 0
     }
+
+
   </style>
 </head>
 <body>
   <div class="player" id="player">
-    <div class="js-video-container"></div>
-    <!-- Here can be placed player controls: play and volume buttons -->
-    <div class="button-string">
-      <button class="js-play-button">
+    <div class="screen js-video-container"></div>
+    <div class="bottom-controls">
+      <button class="left-button js-play-button">
         <i class="fa fa-play" aria-hidden="true"></i>
       </button>
       <button class="js-pause-button">
@@ -42,6 +51,10 @@
       </button>
       <button class="js-volume-button">
         <i class="fa fa-volume-off" aria-hidden="true"></i>
+      </button>
+      <div style="flex-grow: 5" ></div>
+      <button class="js-fullscreen-button">
+        <i class="fa fa-expand" aria-hidden="true"></i>
       </button>
     </div>
   </div>
