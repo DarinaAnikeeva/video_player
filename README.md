@@ -5,7 +5,7 @@
 Построен на базе библиотеки [Playable](https://wix.github.io/playable/).
 ## Запуск:
 
-Для просмотра работы видеоплеера нажмите [демо видеоплеера](https://maksanikeev.github.io/video_pleer/)
+Для просмотра работы видеоплеера нажмите [демо видеоплеера](https://darinaanikeeva.github.io/video_player/)
 
 ### Выбор видео:
 
