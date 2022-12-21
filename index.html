@@ -6,6 +6,7 @@
 
   <link type="image/x-icon" href="static/img/favicon.ico" rel="shortcut icon">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" >
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
   <style type="text/css">
     .video-player {
@@ -33,11 +34,19 @@
       color: white;
       background-color: transparent;
       font-size: 120%;
-      margin: 10px;
+      margin: 6px;
     }
 
-    .video-player__progress{
-      flex-grow: 1
+    .video-player__progress_bar{
+       background-color:black;
+       color: white;
+       flex-grow: 2;
+       font-family: 'Roboto 400', sans-serif;
+    }
+
+    .video-player__duration{
+      color: white;
+      flex-grow: 0;
     }
   </style>
 </head>
@@ -45,22 +54,35 @@
   <div class="video-player" id="player">
     <div class="screen js-video-container"></div>
     <div class="bottom-controls">
+
       <button class="video-player__button js-play-button">
         <i class="fa fa-play" aria-hidden="true"></i>
       </button>
+
       <button class="video-player__button js-pause-button">
         <i class="fa fa-pause" aria-hidden="true"></i>
       </button>
+
       <button class="video-player__button js-mute-button">
         <i class="fa fa-volume-up" aria-hidden="true"></i>
       </button>
+
       <button class="video-player__button js-volume-button">
         <i class="fa fa-volume-off" aria-hidden="true"></i>
       </button>
-      <div class="video-player__progress" ></div>
+
+      <div class="video-player__duration js-current-time"></div>
+
+      <div class="video-player__progress_bar js-progress">
+        <div class="js-progress-slider"></div>
+      </div>
+
+      <div class="video-player__duration js-duration"></div>
+
       <button class="video-player__button js-fullscreen-button">
         <i class="fa fa-expand" aria-hidden="true"></i>
       </button>
+
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
