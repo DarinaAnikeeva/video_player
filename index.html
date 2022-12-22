@@ -37,17 +37,39 @@
       margin: 6px;
     }
 
-    .video-player__progress_bar{
-       background-color:black;
-       color: white;
-       flex-grow: 2;
-       font-family: 'Roboto 400', sans-serif;
+    .video-player__progress{
+       background-color: black;
+       flex-grow: 1;
+       margin: 8px;
+       display: flex;
+       flex-direction: row;
     }
 
     .video-player__duration{
       color: white;
-      flex-grow: 0;
+      font-family: 'Roboto 400', sans-serif;
     }
+
+    .video-player__progress_line{
+      background-color: red;
+      height: 5px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    .red-circle{
+      background-color: red;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      height: 7px;
+      width: 7px;
+      border-style: solid;
+      border-color: white;
+      border-width: 3px;
+      border-radius: 50%;
+      display: inline-block;
+      margin: -5px;
+    }
+
   </style>
 </head>
 <body>
@@ -73,8 +95,9 @@
 
       <div class="video-player__duration js-current-time"></div>
 
-      <div class="video-player__progress_bar js-progress">
-        <div class="js-progress-slider"></div>
+      <div class="video-player__progress js-progress">
+        <div class="video-player__progress_line js-progress-slider"></div>
+        <div class="red-circle"></div>
       </div>
 
       <div class="video-player__duration js-duration"></div>
